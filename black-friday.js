@@ -12,6 +12,8 @@ function render(){var n=q?now:Date.now();if(n>=start||live){txt.innerHTML="<b>BL
 else{txt.innerHTML="<b>BLACK FRIDAY</b> starter om <span aria-live='off'>"+fmt(start-n)+"</span> · <a href='/black-friday' style='color:#fff'>Se kampanjevarene</a>";}}
 render();if(!live&&!q)setInterval(render,1000);
 document.body.insertBefore(bar,document.body.firstChild);
+var FP={"solid-laptopstativ-i-aluminium-d50e2a54": [499, 399], "sammenleggbart-laptopstativ-i-aluminium-25040810": [399, 319], "kabelholder-for-mus-104d5d16": [499, 399], "ultratynt-baerbart-laptopstativ-989bfa06": [399, 319], "sammenleggbart-metallstativ-for-mobil-og-nettbrett-16246472": [419, 335], "baerbart-laptopstativ-i-aluminium-e561605a": [389, 311], "laptopveske-i-kunstskinn-25080407": [389, 311], "nettbrettstativ-i-aluminium-for-skrivebordet-16f5c14d": [379, 303], "pennholder-i-nordisk-stil-ab8e6e29": [379, 303], "universal-mobilholder-med-fingerring-og-ventilfeste-88159501": [369, 295], "fleksibel-mobil-og-nettbrettholder-for-seng-og-bord-13713493": [359, 287], "gaming-musematte-b3aa1fbf": [339, 271], "vanntett-laptopveske-i-oxfordstoff-e3a1a10b": [309, 247], "diskret-sammenleggbart-mobilstativ-e9f2c456": [299, 239]};/*fp*/
+(function(){var m=location.pathname.match(/^\/p\/([^\/?#]+)/);if(!m||!live)return;var f=FP[m[1]];var pe=document.querySelector('.pp-price');if(!f||!pe)return;pe.innerHTML="<span style='color:#b91c1c'>"+f[1]+" kr</span> <small style='font-size:14px;font-weight:400;color:#555'>med koden "+B.code+" · Førpris (laveste pris siste 30 dager): <s>"+f[0]+" kr</s></small>";})();
 if(/\/black-friday/.test(location.pathname))return;
 var KEY="bf2026_popup_closed";try{if(localStorage.getItem(KEY))return;}catch(e){}
 setTimeout(function(){
