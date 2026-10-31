@@ -1,10 +1,3 @@
-/* Size / colour picker for CJ products (2026-10-02).
- * "Legg i handlekurven" on a CJ product asks /api/cj-variants for its real CJ variants. One variant: the product is
- * added exactly as before. Several: the customer picks size / colour (with the price of that variant) and a cart line
- * for that variant is added. Each variant line carries its own server-signed quote, so checkout charges that variant's
- * price (cost x 2.5, min 99, ending in 9, recomputed server-side) and the order goes to the supplier with its vid.
- * Lines in the cart get an "Endre størrelse/farge" button. Variant lines never appear in the product grid.
- */
 (function () {
   "use strict";
   const STORE = (document.title || "store").replace(/[^a-z0-9]+/gi, "-").toLowerCase();
@@ -53,7 +46,6 @@
     return new Intl.NumberFormat("nb-NO", { style: "currency", currency: "NOK", maximumFractionDigits: 0 }).format(nok);
   }
 
-  /* CJ product (with its signed quote) behind a grid id. */
   function parentById(id) {
     const list = (window.nordicCatalogs && window.nordicCatalogs.cj) || [];
     const hit = list.find(item => String(item.id) === String(id));
@@ -198,7 +190,6 @@
     choose(parent, { mode: "add" });
   }, true);
 
-  // Cart lines: "Endre størrelse/farge" (variant lines) / "Velg størrelse/farge" (CJ products with several variants).
   function lineId(line) {
     if (line.dataset && line.dataset.id) return line.dataset.id;
     if (!line.parentElement || line.parentElement.id !== "cartItems") return "";

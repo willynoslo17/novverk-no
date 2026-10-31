@@ -32,3 +32,19 @@ Auditoría 2026-10-23. Rama `cursor/novverk-no-auditoria-2026-10` desde `main`, 
 ## SuperGrok
 
 Ninguno pedido (verificado 2026-10-22).
+
+## 2026-10-31 — rama `i18n-4-sprak-2026-10-31` (sin fusionar ni desplegar)
+
+Hecho:
+- 4 idiomas: NO (por defecto), EN, SV, PL. `/i18n.js` + `/i18n/{en,sv,pl}.js`, selector NO/EN/SV/PL en todas las páginas (incl. /p/<slug> y baja del boletín), guardado en localStorage, `<html lang>` correcto, `?lang=` funciona. /terms y /privacy → `?lang=en` y `#en` sigue activando inglés.
+- Traducción automática (Argos) de páginas, legales, textos de JS/checkout y nombres/descripciones de producto. **Necesita revisión humana.**
+- Fuera español/Perú/EU (PEN, soles, IGV, S/, €) en páginas, JS y plantillas de email; tienda solo Noruega/NOK.
+- README.md, STRIPE-SETUP.md, supplier-config.json, docs/ → 404 (functions/_middleware.ts). brand = nombre de tienda en functions y catalog-data; sin campo supplier en catalog/*.json; comentarios con proveedores fuera.
+- Texto de envío solo para proveedores con enabled:true.
+- /api/gelato-products devuelve []: las fuentes POD están desactivadas en supplier-bridge.js, así que no se pide ni se pinta ninguna sección vacía (comprobado en navegador). PR #9 sin tocar.
+- Verificado en Chrome headless (escritorio + móvil, 4 idiomas): 0 errores JS, 0 imágenes rotas, selector en todas las páginas, lang correcto. 0 enlaces internos rotos, node --check y esbuild OK.
+
+Pendiente:
+- Stripe Checkout sigue en noruego/automático (no se tocó create-checkout-session.ts).
+- Emails (marketing-templates.ts) quedan solo en noruego (se quitó el español); hace falta re-ejecutar /api/marketing?setup=1 tras el despliegue para actualizar Brevo. Emails de pedido de Make no están en el repo.
+- pricing.ts / provider-orders.ts / create-checkout-session.ts aún contienen lógica PE/EU (servidor de checkout, no tocado por la regla de Stripe).

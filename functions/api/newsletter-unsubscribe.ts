@@ -11,12 +11,12 @@ import { unseal, unsubscribe, type MktEnv } from "../_shared/brevo-marketing";
 const esc = (v: string) => v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const mail = `kontakt@${STORE.domain}`;
 
-function page(no: string, es: string, status = 200) {
+function page(no: string, _es: string, status = 200) {
   const html = `<!doctype html><html lang="nb"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">` +
     `<title>${esc(STORE.brand)} | Nyhetsbrev</title><meta name="robots" content="noindex"><link rel="stylesheet" href="/legal.css">` +
-    `<link rel="icon" href="/favicon.svg" type="image/svg+xml"></head><body>` +
-    `<header class="lg-nav"><a class="lg-brand" href="/">${esc(STORE.brand)}</a><a class="lg-back" href="/">← Tilbake til butikken · Volver a la tienda</a></header>` +
-    `<main class="lg-main"><article id="no" lang="nb">${no}</article><article id="es" lang="es">${es}</article></main></body></html>`;
+    `<link rel="icon" href="/favicon.svg" type="image/svg+xml"><script src="/i18n.js"></script></head><body>` +
+    `<header class="lg-nav"><a class="lg-brand" href="/">${esc(STORE.brand)}</a><a class="lg-back" href="/">← Tilbake til butikken</a></header>` +
+    `<main class="lg-main"><article id="no" lang="nb">${no}</article></main></body></html>`;
   return new Response(html, { status, headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store", "x-robots-tag": "noindex" } });
 }
 

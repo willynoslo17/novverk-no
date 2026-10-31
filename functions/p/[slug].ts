@@ -34,7 +34,7 @@ async function loadCatalog(context: any): Promise<any[]> {
 }
 
 function notFound(origin: string) {
-  return new Response(`<!doctype html><html lang="nb"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Produktet finnes ikke – ${esc(STORE.brand)}</title><link rel="stylesheet" href="/legal.css"></head><body><main style="max-width:720px;margin:60px auto;padding:0 20px;font-family:Inter,Arial,sans-serif"><h1>Produktet er ikke tilgjengelig</h1><p>Det kan være utsolgt eller fjernet fra sortimentet.</p><p><a href="/#produkter">Se alle produkter</a></p></main></body></html>`, { status: 404, headers: { "content-type": "text/html; charset=utf-8" } });
+  return new Response(`<!doctype html><html lang="nb"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Produktet finnes ikke – ${esc(STORE.brand)}</title><link rel="stylesheet" href="/legal.css"><script src="/i18n.js"></script></head><body><main style="max-width:720px;margin:60px auto;padding:0 20px;font-family:Inter,Arial,sans-serif"><h1>Produktet er ikke tilgjengelig</h1><p>Det kan være utsolgt eller fjernet fra sortimentet.</p><p><a href="/#produkter">Se alle produkter</a></p></main></body></html>`, { status: 404, headers: { "content-type": "text/html; charset=utf-8" } });
 }
 
 export async function onRequestGet(context: any) {
@@ -73,7 +73,7 @@ export async function onRequestGet(context: any) {
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/legal.css">
 <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, "\\u003c")}</script>
 <style>body{margin:0;font-family:Inter,Arial,sans-serif;background:#fff;color:#172033}.pp-top{display:flex;justify-content:space-between;align-items:center;padding:16px 5%;border-bottom:1px solid #e5e7eb}.pp-top a{color:inherit;text-decoration:none;font-weight:800;letter-spacing:2px}.pp{max-width:1100px;margin:0 auto;padding:32px 5%;display:grid;grid-template-columns:1.1fr .9fr;gap:40px}.pp-main{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;background:#f3f4f6}.pp-thumbs{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}.pp-thumbs img{width:70px;height:70px;object-fit:cover;border-radius:8px;cursor:pointer;border:1px solid #e5e7eb}.pp-tag{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#64748b}.pp h1{font-size:34px;line-height:1.15;margin:10px 0}.pp-price{font-size:28px;font-weight:800;margin:14px 0}.pp-btn{display:inline-block;background:#111827;color:#fff;padding:15px 26px;border-radius:10px;text-decoration:none;font-weight:800}.pp ul{line-height:1.8;color:#475569;padding-left:18px}.pp p{line-height:1.6;color:#334155}@media(max-width:800px){.pp{grid-template-columns:1fr}.pp h1{font-size:26px}}</style>
-</head><body>
+<script src="/i18n.js"></script></head><body>
 <header class="pp-top"><a href="/">${esc(STORE.brand.toUpperCase())}</a><a href="/#produkter" style="font-weight:600;letter-spacing:0">← Alle produkter</a></header>
 <main class="pp" itemscope itemtype="https://schema.org/Product">
 <div><img class="pp-main" id="ppMain" src="${esc(images[0])}" alt="${esc(name)}" itemprop="image">${images.length > 1 ? `<div class="pp-thumbs">${images.map((src) => `<img src="${esc(src)}" alt="${esc(name)}" loading="lazy" onclick="document.getElementById('ppMain').src=this.src">`).join("")}</div>` : ""}</div>
