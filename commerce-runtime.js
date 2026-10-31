@@ -73,7 +73,6 @@
     return productById(id);
   }
 
-  /* Saved cart lines whose product has not loaded yet (background suppliers such as Gelato). */
   let pendingCart = {};
 
   function saveCartSoon() {

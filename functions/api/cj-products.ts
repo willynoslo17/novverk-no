@@ -276,7 +276,7 @@ function toProduct(item: any, index: number, sector: string) {
     supplierPriceMaxUsd: costMax,
     suggestedRetailUsd: retail,
     base: retail,
-    brand: "CJ Dropshipping",
+    brand: "Novverk",
     supplier: "CJ Dropshipping",
     provider: "cj",
     listedNum: Number(item.listedNum) || 0,
