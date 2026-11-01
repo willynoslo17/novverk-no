@@ -34,6 +34,7 @@
     "kindle case"
   ],
   "pids": [
+    "1363045794600587264",
     "B3AA1FBF-0E9B-421D-BF0B-9FAF608DB9B7",
     "E3A1A10B-6164-4B0E-8439-396E5413E02C",
     "3E45C2D0-99EF-47BC-800D-A5AED3BF25F9",
@@ -676,6 +677,18 @@
       "image": "https://oss-cf.cjdropshipping.com/product/2025/01/04/12/da3de533-694f-472b-9427-502f0c53d0ac.jpg",
       "supplierPriceMaxUsd": 5.1482,
       "keyword": "laptop sleeve"
+    },
+    {
+      "id": "1363045794600587264",
+      "sku": "CJLE101693101AZ",
+      "name": "Vanntett solcellelys med RGB LED for trapp og gjerde",
+      "nameEn": "Waterproof New RGB LED Solar Light Step Fence Light",
+      "category": "Teknologi",
+      "image": "https://cf.cjdropshipping.com/1614679282500.jpg",
+      "supplierPriceMaxUsd": 31.68,
+      "keyword": "",
+      "description": "Vanntett solcelledrevet LED-lys med fargeskift (RGB) for trapper, gjerder og uteplass. Lades av sola, tennes automatisk i mørket. Fås i 1, 4, 6 og 8 stk. CE (EMC) og RoHS-dokumentasjon fra leverandøren.",
+      "certified": "2026-11-01"
     }
   ]
 }
