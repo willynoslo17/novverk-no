@@ -492,7 +492,7 @@ function renderProducts(){
       <div class="specs">${specLine(p)}</div>
       <button class="add" type="button" onclick="add(${p.id})">Legg i handlekurven</button>
     </div>
-  </article>`).join(''):'<p class="muted">Produktene lastes inn. Vises ingenting, prøv igjen om litt.</p>';
+  </article>`).join(''):'<p class="muted">Nye produkter kommer snart.</p>';
 }
 function add(id){cart[id]=(cart[id]||0)+1;renderCart();openCart()}
 function qty(id,d){cart[id]+=d;if(cart[id]<=0)delete cart[id];renderCart()}
