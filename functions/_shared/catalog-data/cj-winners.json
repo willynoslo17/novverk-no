@@ -34,6 +34,7 @@
     "kindle case"
   ],
   "pids": [
+    "1452615825222668288",
     "1363045794600587264",
     "B3AA1FBF-0E9B-421D-BF0B-9FAF608DB9B7",
     "E3A1A10B-6164-4B0E-8439-396E5413E02C",
@@ -688,6 +689,18 @@
       "supplierPriceMaxUsd": 31.68,
       "keyword": "",
       "description": "Vanntett solcelledrevet LED-lys med fargeskift (RGB) for trapper, gjerder og uteplass. Lades av sola, tennes automatisk i mørket. Fås i 1, 4, 6 og 8 stk. CE (EMC) og RoHS-dokumentasjon fra leverandøren.",
+      "certified": "2026-11-01"
+    },
+    {
+      "id": "1452615825222668288",
+      "sku": "CJSN133067701AZ",
+      "name": "3D månelampe med 16 farger (oppladbar, USB)",
+      "nameEn": "3D Printing Moon Light Galaxy  Light",
+      "category": "Teknologi",
+      "image": "https://oss-cf.cjdropshipping.com/product/2023/11/09/08/555ae73a-ca27-4c3a-b4b0-a74da106ead5.jpg",
+      "supplierPriceMaxUsd": 11.52,
+      "keyword": "",
+      "description": "3D-printet månelampe med trestativ, 16 farger, berøring og fjernkontroll. Oppladbart 3,7 V-batteri (lades med USB, ca. 3 timer, lyser 3–6 timer). Velg størrelse 8–20 cm. CE (EMC, EN IEC 55015 og EN 61547) og RoHS dokumentert for Moon night light 16-fargers modell.",
       "certified": "2026-11-01"
     }
   ]
