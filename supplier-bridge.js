@@ -359,7 +359,7 @@
   /* Storefront rule (owner, 2026-10-02): every product that has an image is shown. */
   /* 2026-10-31 (sincert): only products with a confirmed certificate are shown. Restore with restaurar_por_sku.py. */
   const NORDIC_CERT_ONLY = true;
-  const NORDIC_CERTIFIED = new Set(["1363045794600587264", "CJLE101693101AZ", "1452615825222668288", "CJSN133067701AZ", "1645038151301337088", "CJJT172994701AZ", "2507100222231628700", "CJJT242616401AZ"]);
+  const NORDIC_CERTIFIED = new Set(["1363045794600587264", "CJLE101693101AZ", "1452615825222668288", "CJSN133067701AZ", "1645038151301337088", "CJJT172994701AZ", "2507100222231628700", "CJJT242616401AZ", "11002410588108765740", "11186452768273668294", "13525578223055726242", "13781180658643453021", "14232655638286743019", "18477715762860002185", "21056283340527231646", "23613070819989847894", "25310878194442993243", "29484817235865519671", "31456056178503076610", "32843226751265071548", "66238162800540527650", "78813005650432844542", "pfy-tech-hoodie-black-l", "pfy-tech-hoodie-black-m", "pfy-tech-hoodie-black-s", "pfy-tech-hoodie-black-xl", "pfy-tech-journal", "pfy-tech-mousepad", "pfy-tech-poster-art", "pfy-tech-poster-type", "pfy-tech-sticker", "pfy-tech-tee-black-l", "pfy-tech-tee-black-m", "pfy-tech-tee-black-s", "pfy-tech-tee-black-xl", "pfy-tech-tote"]);
   function certified(item) { return !NORDIC_CERT_ONLY || [item.externalId, item.cjPid, item.id, item.sku].some(v => v != null && NORDIC_CERTIFIED.has(String(v))); }
   function storefrontItem() {
     return item => Boolean(item && item.image && certified(item));
