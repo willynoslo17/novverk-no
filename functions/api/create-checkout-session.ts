@@ -168,7 +168,7 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
   for (let index = 0; index < body.items.length; index++) {
     const item = body.items[index] || {};
     const product = await resolveLine(item, context.env);
-    const nok = product ? retailNokFor(product.provider, product.ref, product.costUsd) : 0;
+    const nok = product ? retailNokFor(product.provider, product.ref, product.costUsd, (product.ids as any)?.cj_vid) : 0;
     if (!product || !nok) {
       return json("Invalid product", 400, { line: index });
     }
