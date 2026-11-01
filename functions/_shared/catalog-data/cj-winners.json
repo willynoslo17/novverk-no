@@ -34,6 +34,8 @@
     "kindle case"
   ],
   "pids": [
+    "2507100222231628700",
+    "1645038151301337088",
     "1452615825222668288",
     "1363045794600587264",
     "B3AA1FBF-0E9B-421D-BF0B-9FAF608DB9B7",
@@ -701,6 +703,30 @@
       "supplierPriceMaxUsd": 11.52,
       "keyword": "",
       "description": "3D-printet månelampe med trestativ, 16 farger, berøring og fjernkontroll. Oppladbart 3,7 V-batteri (lades med USB, ca. 3 timer, lyser 3–6 timer). Velg størrelse 8–20 cm. CE (EMC, EN IEC 55015 og EN 61547) og RoHS dokumentert for Moon night light 16-fargers modell.",
+      "certified": "2026-11-01"
+    },
+    {
+      "id": "1645038151301337088",
+      "sku": "CJJT172994701AZ",
+      "name": "Oppladbar and-nattlampe i silikon (DS-DUCK-01)",
+      "nameEn": "Doudou Duck Silicone Alarm Lamp Ambience Light Bedroom Bedside Lamp Usb Charging With Sleeping Night Light",
+      "category": "Lys",
+      "image": "https://oss-cf.cjdropshipping.com/product/2024/04/07/06/4316fd1c-4288-4e94-bcfc-2bda00bafa9c.jpg",
+      "supplierPriceMaxUsd": 6.63,
+      "keyword": "",
+      "description": "Myk nattlampe i silikon formet som en and. Klem for å slå på, to lysstyrker og 20 minutters timer. Innebygd 1200 mAh batteri, lades via USB (kabel følger med) – ingen stikkontakt, ingen radio. CE: EMC etter EN IEC 55015/61547 og RoHS – modell DS-DUCK-01.",
+      "certified": "2026-11-01"
+    },
+    {
+      "id": "2507100222231628700",
+      "sku": "CJJT242616401AZ",
+      "name": "Oppladbar rev-nattlampe (DS-FOX-01)",
+      "nameEn": "Fox USB Rechargeable Bedroom Creative Cartoon Small Night Lamp",
+      "category": "Lys",
+      "image": "https://oss-cf.cjdropshipping.com/product/2025/07/10/02/8bb69ebb-d9cd-4e67-b002-a8f7bee00ff5_fine.jpeg",
+      "supplierPriceMaxUsd": 5.97,
+      "keyword": "",
+      "description": "Søt rev-nattlampe med to lysstyrker og 20 minutters timer. Innebygd 1200 mAh batteri, lades via USB – ingen stikkontakt, ingen radio. CE: EMC etter EN IEC 55015/61547 og RoHS – modell DS-FOX-01.",
       "certified": "2026-11-01"
     }
   ]
