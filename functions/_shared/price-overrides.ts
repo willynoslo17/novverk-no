@@ -8,9 +8,8 @@ export const HIDDEN = new Set<string>(["1563124003232034816", "CD6A14B6-2DC9-400
 
 /* 2026-10-31 (sincert): CERT_ONLY = true -> ONLY ids listed in CERTIFIED are shown/sellable (all providers: CJ, Printify, Printful, Gelato).
  * Restore per SKU with /workspace/negocios/restaurar_por_sku.py (adds the id here and removes it from HIDDEN). */
-/* 2026-11-02: Printify-krus og barne-t-skjorter skjult igjen: ingen dokumentasjon (EU 1935/2004/LFGB for krus; EN 14682/REACH for barneklær). */
 export const CERT_ONLY = true;
-export const CERTIFIED = new Set<string>(["1363045794600587264", "1452615825222668288", "1645038151301337088", "2507100222231628700", "pfy-tech-tote", "pfy-tech-poster-art", "pfy-tech-poster-type", "pfy-tech-journal", "pfy-tech-sticker", "pfy-tech-mousepad", "pfy-tech-tee-black-s", "pfy-tech-tee-black-m", "pfy-tech-tee-black-l", "pfy-tech-tee-black-xl", "pfy-tech-hoodie-black-s", "pfy-tech-hoodie-black-m", "pfy-tech-hoodie-black-l", "pfy-tech-hoodie-black-xl"]);
+export const CERTIFIED = new Set<string>(["1363045794600587264", "1452615825222668288", "1645038151301337088", "2507100222231628700", "pfy-tech-tote", "pfy-tech-poster-art", "pfy-tech-poster-type", "pfy-tech-journal", "pfy-tech-sticker", "pfy-tech-mousepad", "pfy-tech-tee-black-s", "pfy-tech-tee-black-m", "pfy-tech-tee-black-l", "pfy-tech-tee-black-xl", "pfy-tech-hoodie-black-s", "pfy-tech-hoodie-black-m", "pfy-tech-hoodie-black-l", "pfy-tech-hoodie-black-xl", "pfy-tech-mug-std", "pfy-tech-mug-eu"]);
 
 /* 2026-11-01 16:13 owner rule (replaces ~15 kr under): price = SAME total as the most comparable Norwegian product (incl. shipping), always with profit; discounts only when owner says. Per CJ variant (vid). */
 export const VARIANT_PRICE: Record<string, number> = {"1363045795821129728": 79, "1674335434605867008": 399, "1566316780057014272": 539, "2501110857241627200": 749, "1452615825289777152": 109, "1452615825289777153": 129, "1452615825293971456": 219, "1452615825293971457": 229, "1452615825293971458": 339, "1452615825298165760": 419, "1645303839496605696": 189, "2507100222231628900": 319};
